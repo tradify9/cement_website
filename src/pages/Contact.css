@@ -1,0 +1,94 @@
+/* =========================
+   CONTACT PAGE STYLES
+========================= */
+
+.contact-page {
+  background: #f8f9fa;
+}
+
+/* IMAGE */
+.contact-page img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* FORM BOX */
+.contact-form-box {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* FORM HEADING */
+.contact-form-box h3 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* INPUT & TEXTAREA */
+.contact-form-box .form-control {
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.contact-form-box .form-control:focus {
+  border-color: #ffff00;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 0, 0.25);
+}
+
+/* FILE INPUT */
+.contact-form-box input[type="file"] {
+  padding: 8px;
+}
+
+/* BUTTON */
+.contact-form-box .btn-warning {
+  background: #ffff00;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.contact-form-box .btn-warning:hover {
+  background: #e6e600;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-page img {
+    height: 260px;
+    margin-bottom: 25px;
+  }
+
+  .contact-form-box {
+    padding: 25px 20px;
+  }
+}
+
+/* ADDRESS WITH ICON */
+.contact-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-address i {
+  font-size: 22px;
+  color: #ffff00;
+  margin-top: 2px;
+}

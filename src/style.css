@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.hero-img {
+  height: 80vh;
+  object-fit: cover;
+}

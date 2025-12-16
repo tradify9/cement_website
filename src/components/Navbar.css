@@ -1,0 +1,80 @@
+/* NAVBAR BASE */
+.custom-navbar {
+  background: #fff;              /* WHITE */
+  padding: 14px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #000 !important;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffff00;
+}
+
+/* NAV LINKS */
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  padding: 8px 0;
+}
+
+/* HOVER LINE EFFECT */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #ffff00;
+  transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* PHONE */
+.nav-phone {
+  margin-left: 20px;
+  padding: 8px 14px;
+  border: 2px solid #ffff00;
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* PHONE HOVER */
+.nav-phone:hover {
+  background: #ffff00;
+  color: #000;
+  cursor: pointer;
+}
+
+/* FIX TOGGLER ICON (WHITE BG) */
+.navbar-toggler {
+  border-color: #000;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .nav-phone {
+    margin-top: 12px;
+  }
+}
+
+
