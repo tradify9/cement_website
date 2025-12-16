@@ -1,87 +1,151 @@
 import React from "react";
-import { TypeAnimation,Link } from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
+import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import "./Home.css";
 
 
 
 export default function Home() {
+
     return (
         <>
           <section className="cement-slider-section">
 
-      <div
-        id="cementSlider"
-        className="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="2000"
-      >
-        {/* SLIDER IMAGES */}
-        <div className="carousel-inner">
+      <Carousel id="cementSlider" interval={2000} ride="carousel">
+        <Carousel.Item>
+          <img
+            className="d-block w-100 slider-img"
+            src="https://ccemagazine.com/wp-content/uploads/sites/11/2024/12/Construction-engineering-trends-2024-800x445.png"
+            alt="Cement Work"
+          />
+          {/* ✅ COMMON OVERLAY (ALL SLIDES) */}
+          <Carousel.Caption className="slider-overlay">
+            <h1 className="slider-heading">
+              <TypeAnimation
+                sequence={[
+                  "Strong Cement for Strong Homes",
+                  2000,
+                  "Build Safe & Durable Houses",
+                  2000,
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
 
-          <div className="carousel-item active">
-            <img
-              src="https://ccemagazine.com/wp-content/uploads/sites/11/2024/12/Construction-engineering-trends-2024-800x445.png"
-              className="d-block w-100 slider-img"
-              alt="Cement Work"
-            />
-          </div>
+            <p className="slider-para">
+              Premium quality cement is the foundation of every strong
+              and long-lasting home. It ensures better strength,
+              durability, and safety for your dream house.
+            </p>
 
-          <div className="carousel-item">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/033/027/793/small/business-man-construction-engineers-supervising-progress-of-construction-project-at-construction-site-ai-generate-free-photo.jpg"
-              className="d-block w-100 slider-img"
-              alt="Construction Site"
-            />
-          </div>
+            <div className="slider-buttons">
+              <button className="btn btn-yellow">Get Quote</button>
+              <button className="btn btn-outline-yellow">Contact Us</button>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-          <div className="carousel-item">
-            <img
-              src="https://st2.depositphotos.com/1001335/9340/i/450/depositphotos_93401314-stock-photo-concept-of-construction-and-design.jpg"
-              className="d-block w-100 slider-img"
-              alt="Home Construction"
-            />
-          </div>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 slider-img"
+            src="https://static.vecteezy.com/system/resources/thumbnails/033/027/793/small/business-man-construction-engineers-supervising-progress-of-construction-project-at-construction-site-ai-generate-free-photo.jpg"
+            alt="Construction Site"
+          />
+          <Carousel.Caption className="slider-overlay">
+            <h1 className="slider-heading">
+              <TypeAnimation
+                sequence={[
+                  "Strong Cement for Strong Homes",
+                  2000,
+                  "Build Safe & Durable Houses",
+                  2000,
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
 
-          <div className="carousel-item">
-            <img
-              src="https://www.e-basel.com/wp-content/uploads/2023/04/Growing-Urbanization-is-Bringing-Robots-into-Construction.jpg"
-              className="d-block w-100 slider-img"
-              alt="Building Material"
-            />
-          </div>
+            <p className="slider-para">
+              Premium quality cement is the foundation of every strong
+              and long-lasting home. It ensures better strength,
+              durability, and safety for your dream house.
+            </p>
 
-        </div>
+            <div className="slider-buttons">
+              <button className="btn btn-yellow">Get Quote</button>
+              <button className="btn btn-outline-yellow">Contact Us</button>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-        {/* ✅ COMMON OVERLAY (ALL SLIDES) */}
-        <div className="slider-overlay">
-          <h1 className="slider-heading">
-            <TypeAnimation
-              sequence={[
-                "Strong Cement for Strong Homes",
-                2000,
-                "Build Safe & Durable Houses",
-                2000,
-              ]}
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 slider-img"
+            src="https://st2.depositphotos.com/1001335/9340/i/450/depositphotos_93401314-stock-photo-concept-of-construction-and-design.jpg"
+            alt="Home Construction"
+          />
+          <Carousel.Caption className="slider-overlay">
+            <h1 className="slider-heading">
+              <TypeAnimation
+                sequence={[
+                  "Strong Cement for Strong Homes",
+                  2000,
+                  "Build Safe & Durable Houses",
+                  2000,
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
 
-          <p className="slider-para">
-            Premium quality cement is the foundation of every strong
-            and long-lasting home. It ensures better strength,
-            durability, and safety for your dream house.
-          </p>
+            <p className="slider-para">
+              Premium quality cement is the foundation of every strong
+              and long-lasting home. It ensures better strength,
+              durability, and safety for your dream house.
+            </p>
 
-          <div className="slider-buttons">
-            <button className="btn btn-yellow">Get Quote</button>
-            <button className="btn btn-outline-yellow">Contact Us</button>
-          </div>
-        </div>
+            <div className="slider-buttons">
+              <button className="btn btn-yellow">Get Quote</button>
+              <button className="btn btn-outline-yellow">Contact Us</button>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-      </div>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 slider-img"
+            src="https://www.e-basel.com/wp-content/uploads/2023/04/Growing-Urbanization-is-Bringing-Robots-into-Construction.jpg"
+            alt="Building Material"
+          />
+          <Carousel.Caption className="slider-overlay">
+            <h1 className="slider-heading">
+              <TypeAnimation
+                sequence={[
+                  "Strong Cement for Strong Homes",
+                  2000,
+                  "Build Safe & Durable Houses",
+                  2000,
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
+
+            <p className="slider-para">
+              Premium quality cement is the foundation of every strong
+              and long-lasting home. It ensures better strength,
+              durability, and safety for your dream house.
+            </p>
+
+            <div className="slider-buttons">
+              <button className="btn btn-yellow">Get Quote</button>
+              <button className="btn btn-outline-yellow">Contact Us</button>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
 
     </section>
 
@@ -129,142 +193,115 @@ export default function Home() {
                     </div>
 
                     {/* SLIDER */}
-                    <div
-                        id="infoSectionSlider"
-                        className="carousel slide"
-                        data-bs-ride="carousel"
-                    >
-                        <div className="carousel-inner">
-
-                            {/* SLIDE 1 – PPC */}
-                            <div className="carousel-item active">
-                                <div className="row align-items-center">
-                                    <div className="col-md-6">
-                                        <img
-                                            src="https://img.freepik.com/free-photo/woman-african-american-worker-standing-with-plan-factory_1303-30604.jpg?semt=ais_hybrid&w=740&q=80"
-                                            className="img-fluid rounded shadow"
-                                            alt="PPC Cement"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h3>Portland Pozzolana Cement (PPC)</h3>
-                                        <p>
-                                            PPC Cement is manufactured by blending clinker with
-                                            pozzolanic materials like fly ash. It provides better
-                                            durability, improved workability, reduced cracking,
-                                            and long-term strength.
-                                        </p>
-                                    </div>
+                    <Carousel id="infoSectionSlider">
+                        {/* SLIDE 1 – PPC */}
+                        <Carousel.Item>
+                            <div className="row align-items-center">
+                                <div className="col-md-6">
+                                    <img
+                                        src="https://img.freepik.com/free-photo/woman-african-american-worker-standing-with-plan-factory_1303-30604.jpg?semt=ais_hybrid&w=740&q=80"
+                                        className="img-fluid rounded shadow"
+                                        alt="PPC Cement"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <h3>Portland Pozzolana Cement (PPC)</h3>
+                                    <p>
+                                        PPC Cement is manufactured by blending clinker with
+                                        pozzolanic materials like fly ash. It provides better
+                                        durability, improved workability, reduced cracking,
+                                        and long-term strength.
+                                    </p>
                                 </div>
                             </div>
+                        </Carousel.Item>
 
-                            {/* SLIDE 2 – PPC USE */}
-                            <div className="carousel-item">
-                                <div className="row align-items-center">
-                                    <div className="col-md-6">
-                                        <img
-                                            src="https://internal-assets.jswonemsme.com/constructionbucketcrane_1736773373798_5302b25747/constructionbucketcrane_1736773373798_5302b25747.jpeg"
-                                            className="img-fluid rounded shadow"
-                                            alt="PPC Applications"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h3>PPC Cement – Applications</h3>
-                                        <p>
-                                            PPC Cement is ideal for plastering, masonry work,
-                                            residential buildings, bridges, and marine structures
-                                            due to its superior bonding and smooth finish.
-                                        </p>
-                                    </div>
+                        {/* SLIDE 2 – PPC USE */}
+                        <Carousel.Item>
+                            <div className="row align-items-center">
+                                <div className="col-md-6">
+                                    <img
+                                        src="https://internal-assets.jswonemsme.com/constructionbucketcrane_1736773373798_5302b25747/constructionbucketcrane_1736773373798_5302b25747.jpeg"
+                                        className="img-fluid rounded shadow"
+                                        alt="PPC Applications"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <h3>PPC Cement – Applications</h3>
+                                    <p>
+                                        PPC Cement is ideal for plastering, masonry work,
+                                        residential buildings, bridges, and marine structures
+                                        due to its superior bonding and smooth finish.
+                                    </p>
                                 </div>
                             </div>
+                        </Carousel.Item>
 
-                            {/* SLIDE 3 – OPC 53 */}
-                            <div className="carousel-item">
-                                <div className="row align-items-center">
-                                    <div className="col-md-6">
-                                        <img
-                                            src="https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/home-building-explained-single/descriptive-articles/types-of-cement/_jcr_content/root/container/container_1646056284/teaser.coreimg.jpeg/1738760970041/a-quick-guide-to-choosing-the-best-cement-for-your-home-min-min.jpeg"
-                                            className="img-fluid rounded shadow"
-                                            alt="OPC 53 Grade Cement"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h3>OPC 53 Grade Cement</h3>
-                                        <p>
-                                            OPC 53 Grade Cement offers very high early strength,
-                                            making it suitable for RCC work, columns, beams,
-                                            slabs, and high-rise structures where fast strength
-                                            gain is required.
-                                        </p>
-                                    </div>
+                        {/* SLIDE 3 – OPC 53 */}
+                        <Carousel.Item>
+                            <div className="row align-items-center">
+                                <div className="col-md-6">
+                                    <img
+                                        src="https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/home-building-explained-single/descriptive-articles/types-of-cement/_jcr_content/root/container/container_1646056284/teaser.coreimg.jpeg/1738760970041/a-quick-guide-to-choosing-the-best-cement-for-your-home-min-min.jpeg"
+                                        className="img-fluid rounded shadow"
+                                        alt="OPC 53 Grade Cement"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <h3>OPC 53 Grade Cement</h3>
+                                    <p>
+                                        OPC 53 Grade Cement offers very high early strength,
+                                        making it suitable for RCC work, columns, beams,
+                                        slabs, and high-rise structures where fast strength
+                                        gain is required.
+                                    </p>
                                 </div>
                             </div>
+                        </Carousel.Item>
 
-                            {/* SLIDE 4 – OPC 43 */}
-                            <div className="carousel-item">
-                                <div className="row align-items-center">
-                                    <div className="col-md-6">
-                                        <img
-                                            src="https://www.jkcement.com/wp-content/uploads/2023/08/concrete-block-wall-construction-site-scaled.jpg"
-                                            className="img-fluid rounded shadow"
-                                            alt="OPC 43 Grade Cement"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h3>OPC 43 Grade Cement</h3>
-                                        <p>
-                                            OPC 43 Grade Cement provides balanced strength and
-                                            durability. It is suitable for general construction,
-                                            plastering, flooring, and residential projects.
-                                        </p>
-                                    </div>
+                        {/* SLIDE 4 – OPC 43 */}
+                        <Carousel.Item>
+                            <div className="row align-items-center">
+                                <div className="col-md-6">
+                                    <img
+                                        src="https://www.jkcement.com/wp-content/uploads/2023/08/concrete-block-wall-construction-site-scaled.jpg"
+                                        className="img-fluid rounded shadow"
+                                        alt="OPC 43 Grade Cement"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <h3>OPC 43 Grade Cement</h3>
+                                    <p>
+                                        OPC 43 Grade Cement provides balanced strength and
+                                        durability. It is suitable for general construction,
+                                        plastering, flooring, and residential projects.
+                                    </p>
                                 </div>
                             </div>
+                        </Carousel.Item>
 
-                            {/* SLIDE 5 – COMPARISON */}
-                            <div className="carousel-item">
-                                <div className="row align-items-center">
-                                    <div className="col-md-6">
-                                        <img
-                                            src="https://img.freepik.com/free-photo/civil-engineer-construction-worker-architects-wearing-hardhats-safety-vests-are-working-together-construction-site-building-home-cooperation-teamwork-concept_640221-172.jpg?semt=ais_hybrid&w=740&q=80"
-                                            className="img-fluid rounded shadow"
-                                            alt="Cement Selection"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h3>Choosing the Right Cement</h3>
-                                        <p>
-                                            PPC Cement is best for durability and plastering,
-                                            OPC 53 Grade is ideal for heavy RCC and fast-track
-                                            construction, while OPC 43 Grade is suitable for
-                                            general-purpose building work.
-                                        </p>
-                                    </div>
+                        {/* SLIDE 5 – COMPARISON */}
+                        <Carousel.Item>
+                            <div className="row align-items-center">
+                                <div className="col-md-6">
+                                    <img
+                                        src="https://img.freepik.com/free-photo/civil-engineer-construction-worker-architects-wearing-hardhats-safety-vests-are-working-together-construction-site-building-home-cooperation-teamwork-concept_640221-172.jpg?semt=ais_hybrid&w=740&q=80"
+                                        className="img-fluid rounded shadow"
+                                        alt="Cement Selection"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <h3>Choosing the Right Cement</h3>
+                                    <p>
+                                        PPC Cement is best for durability and plastering,
+                                        OPC 53 Grade is ideal for heavy RCC and fast-track
+                                        construction, while OPC 43 Grade is suitable for
+                                        general-purpose building work.
+                                    </p>
                                 </div>
                             </div>
-
-                        </div>
-
-                        {/* ARROWS */}
-                        <button
-                            className="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#infoSectionSlider"
-                            data-bs-slide="prev"
-                        >
-                            <span className="carousel-control-prev-icon" />
-                        </button>
-
-                        <button
-                            className="carousel-control-next"
-                            type="button"
-                            data-bs-target="#infoSectionSlider"
-                            data-bs-slide="next"
-                        >
-                            <span className="carousel-control-next-icon" />
-                        </button>
-                    </div>
+                        </Carousel.Item>
+                    </Carousel>
 
                 </div>
             </section>
