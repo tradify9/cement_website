@@ -1,69 +1,54 @@
-/* =========================
-   FOOTER BASE
-========================= */
+/* ================= FOOTER BASE ================= */
 .footer-main {
-  background: #2e2e2e;
-  color: #ccc;
-  padding: 60px 0 25px;
-  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
+  background: #0b0b0b;
+  color: #fff;
+  padding-top: 60px;
 }
 
-/* =========================
-   CONTAINER (SIDE GAP FIX)
-========================= */
 .footer-container {
-  max-width: 1140px;   /* tighter than 1200 */
-  margin: 0 auto;
-  padding: 0 12px;     /* side gap kam */
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-/* =========================
-   GRID LAYOUT
-========================= */
+/* ================= GRID : ONE ROW ================= */
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* newsletter hata diya */
-  gap: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: nowrap; /* 🔥 sab ek hi row me */
 }
 
-/* =========================
-   FOOTER COLUMN
-========================= */
+/* ================= COLUMNS ================= */
 .footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-col h5 {
-  color: #f4c430;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ffff00;
 }
 
-/* =========================
-   LOGO
-========================= */
+/* ================= BRAND ================= */
+.brand {
+  flex: 1.4;
+}
+
 .footer-logo-img {
-  width: 135px;
-  margin-bottom: 8px;
+  max-width: 180px;
+  margin-bottom: 14px;
 }
 
-/* =========================
-   DESCRIPTION TEXT
-========================= */
 .footer-desc {
   font-size: 14px;
-  line-height: 1.7;
-  color: #bbb;
-  max-width: 260px;
+  color: #ccc;
+  line-height: 1.6;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* ================= LINKS ================= */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -71,105 +56,75 @@
 }
 
 .footer-links li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-links li:hover,
+.footer-links a:hover {
+  color: #ffff00;
 }
 
 .footer-links a {
-  color: #ccc;
-  font-size: 14px;
   text-decoration: none;
-  transition: 0.3s ease;
+  color: inherit;
 }
 
-.footer-links a:hover {
-  color: #f4c430;
-  padding-left: 4px;
-}
-
-/* =========================
-   CONTACT INFO
-========================= */
+/* ================= CONTACT ================= */
 .footer-contact {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 300px;
-}
-
-.footer-contact i {
-  color: #f4c430;
-  font-size: 15px;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.footer-contact span {
+  gap: 10px;
+  margin-bottom: 12px;
   color: #ccc;
 }
 
 .footer-contact a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .footer-contact a:hover {
-  text-decoration: underline;
+  color: #ffff00;
 }
 
-/* =========================
-   FOOTER BOTTOM
-========================= */
+/* ================= BOTTOM BAR ================= */
 .footer-bottom {
-  border-top: 1px solid #444;
+  border-top: 1px solid #333;
   margin-top: 40px;
-  padding-top: 14px;
+  padding: 20px 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #aaa;
 }
 
-/* =========================
-   TABLET (≤ 992px)
-========================= */
-@media (max-width: 992px) {
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    flex-wrap: wrap; /* tablet / mobile pe neeche aayega */
   }
 
-  .footer-desc,
-  .footer-contact {
-    max-width: 100%;
+  .footer-col {
+    flex: 1 1 45%;
   }
 }
 
-/* =========================
-   MOBILE (≤ 576px)
-========================= */
 @media (max-width: 576px) {
-  .footer-main {
-    text-align: center;
-  }
-
-  .footer-container {
-    padding: 0 10px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .footer-logo-img {
-    margin: 0 auto 8px;
-  }
-
-  .footer-contact {
-    justify-content: center;
-    text-align: left;
-    margin: auto;
+  .footer-col {
+    flex: 1 1 100%;
   }
 }

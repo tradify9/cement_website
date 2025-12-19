@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  /* ================= PRODUCT NAVIGATION (FIXED) ================= */
+  const scrollToSection = (id) => {
+    // 🔥 correct route where products actually exist
+    navigate(`/our/product#${id}`);
+
+  };
+
+  /* ================= SUBSCRIBE HANDLER ================= */
+  const handleSubscribe = (e) => {
     e.preventDefault();
     setSuccess(true);
     setEmail("");
@@ -37,7 +47,28 @@ export default function Footer() {
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/products">Our Products</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* OUR PRODUCTS */}
+            <div className="footer-col">
+              <h5>Our Products</h5>
+              <ul className="footer-links">
+                <li onClick={() => scrollToSection("opc53")}>
+                  OPC 53 Grade Cement
+                </li>
+                <li onClick={() => scrollToSection("opc43")}>
+                  OPC 43 Grade Cement
+                </li>
+                <li onClick={() => scrollToSection("ppc")}>
+                 OPC 33 Grade Cement
+                </li>
+                <li onClick={() => scrollToSection("psc")}>
+                  PPC Cement
+                </li>
+            
               </ul>
             </div>
 
@@ -63,7 +94,9 @@ export default function Footer() {
 
           {/* BOTTOM BAR */}
           <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} CementBuild. All Rights Reserved.</p>
+            <p>
+              © {new Date().getFullYear()} CementBuild. All Rights Reserved.
+            </p>
           </div>
         </div>
       </footer>
