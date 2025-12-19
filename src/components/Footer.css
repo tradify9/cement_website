@@ -4,8 +4,18 @@
 .footer-main {
   background: #2e2e2e;
   color: #ccc;
-  padding: 70px 0 20px;
+  padding: 60px 0 25px;
   font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER (SIDE GAP FIX)
+========================= */
+.footer-container {
+  max-width: 1140px;   /* tighter than 1200 */
+  margin: 0 auto;
+  padding: 0 12px;     /* side gap kam */
 }
 
 /* =========================
@@ -13,176 +23,90 @@
 ========================= */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr); /* newsletter hata diya */
+  gap: 36px;
+}
+
+/* =========================
+   FOOTER COLUMN
+========================= */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col h5 {
+  color: #f4c430;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 /* =========================
    LOGO
 ========================= */
 .footer-logo-img {
-  width: 140px;
-  margin-bottom: 15px;
+  width: 135px;
+  margin-bottom: 8px;
 }
 
 /* =========================
-   TEXT
+   DESCRIPTION TEXT
 ========================= */
 .footer-desc {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #bbb;
-}
-
-/* =========================
-   HEADINGS
-========================= */
-.footer-col h5 {
-  color: #ffff00;
-  font-size: 16px;
-  margin-bottom: 15px;
-  font-weight: 600;
+  max-width: 260px;
 }
 
 /* =========================
    LINKS
 ========================= */
-.footer-col ul {
+.footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-col ul li {
-  font-size: 14px;
-  margin-bottom: 8px;
-  cursor: pointer;
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
   color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
-.footer-col ul li:hover {
-  color: #ffff00;
+.footer-links a:hover {
+  color: #f4c430;
+  padding-left: 4px;
 }
 
 /* =========================
-   NEWSLETTER FORM
+   CONTACT INFO
 ========================= */
-.footer-form {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-form input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #555;
-  outline: none;
-  font-size: 14px;
-  background: #1f1f1f;
-  color: #fff;
-}
-
-.footer-form input::placeholder {
-  color: #999;
-}
-
-.footer-form button {
-  background: #ffff00;
-  border: none;
-  padding: 10px 16px;
-  color: #000;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.footer-form button:hover {
-  background: #e6e600;
-}
-
-/* =========================
-   BOTTOM BAR
-========================= */
-.footer-bottom {
-  border-top: 1px solid #444;
-  margin-top: 40px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-}
-
-/* =========================
-   TABLET (≤ 992px)
-========================= */
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* =========================
-   MOBILE (≤ 576px)
-========================= */
-@media (max-width: 576px) {
-  .footer-main {
-    text-align: center;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-logo-img {
-    margin: 0 auto 15px;
-  }
-
-  .footer-form {
-    flex-direction: column;
-  }
-
-  .footer-form input,
-  .footer-form button {
-    width: 100%;
-  }
-}
-.success-msg {
-  margin-top: 8px;
-  color: #28a745;
-  font-size: 14px;
-  font-weight: 500;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
 .footer-contact {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
   font-size: 14px;
   line-height: 1.6;
-  color: #ccc;
-  margin-bottom: 10px;
+  max-width: 300px;
 }
 
 .footer-contact i {
-  color: #f4c430; /* cement yellow accent */
-  font-size: 16px;
+  color: #f4c430;
+  font-size: 15px;
   margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.footer-contact span {
+  color: #ccc;
 }
 
 .footer-contact a {
@@ -194,56 +118,58 @@
 .footer-contact a:hover {
   text-decoration: underline;
 }
-.footer-links {
-  padding: 0;
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
 }
 
-.footer-links li {
-  list-style: none;
-  margin-bottom: 8px;
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-desc,
+  .footer-contact {
+    max-width: 100%;
+  }
 }
 
-.footer-links a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
+/* =========================
+   MOBILE (≤ 576px)
+========================= */
+@media (max-width: 576px) {
+  .footer-main {
+    text-align: center;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto 8px;
+  }
+
+  .footer-contact {
+    justify-content: center;
+    text-align: left;
+    margin: auto;
+  }
 }
-
-.footer-links a:hover {
-  color: #f4c430;
-  padding-left: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #1ebe5d;
-}
-

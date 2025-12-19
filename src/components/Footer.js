@@ -8,25 +8,19 @@ export default function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // yahan future me API call bhi kar sakte ho
     setSuccess(true);
     setEmail("");
-
-    // 3 sec baad message hide
-    setTimeout(() => {
-      setSuccess(false);
-    }, 3000);
+    setTimeout(() => setSuccess(false), 3000);
   };
 
   return (
     <>
       <footer className="footer-main">
-        <div className="container">
+        <div className="footer-container">
           <div className="footer-grid">
 
             {/* BRAND */}
-            <div className="footer-col">
+            <div className="footer-col brand">
               <img
                 src="https://i.ibb.co/wfRyKG2/Construction-Business-Logo-with-Text-NON-TRADE-CEMENT-removebg-preview.png"
                 alt="CementBuild Logo"
@@ -41,67 +35,40 @@ export default function Footer() {
             <div className="footer-col">
               <h5>Quick Links</h5>
               <ul className="footer-links">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
 
-            {/* CONTACT US */}
+            {/* CONTACT */}
             <div className="footer-col">
               <h5>Contact Us</h5>
 
               <p className="footer-contact">
                 <i className="bi bi-geo-alt-fill"></i>
                 <span>
-                  B Wing 2nd Floor Ahura Centre Mahakali Caves Road Andheri East Mumbai Maharashtra 4000932
+                  B Wing, 2nd Floor, Ahura Centre, Mahakali Caves Road,
+                  Andheri East, Mumbai – 400093
                 </span>
               </p>
 
               <p className="footer-contact">
                 <i className="bi bi-telephone-fill"></i>
-                <a href="tel:+912245301996">+91 2245301996</a>
+                <a href="tel:+912245301996">+91 22 4530 1996</a>
               </p>
-            </div>
-
-
-            {/* NEWSLETTER */}
-            <div className="footer-col">
-              <h5>Newsletter</h5>
-
-              <form onSubmit={handleSubmit} className="footer-form">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit">Signup</button>
-              </form>
-
-              {/* ✅ SUCCESS MESSAGE (EMAIL KE NICHE) */}
-              {success && (
-                <p className="success-msg">
-                  ✅ Subscribed successfully!
-                </p>
-              )}
             </div>
 
           </div>
 
-
+          {/* BOTTOM BAR */}
+          <div className="footer-bottom">
+            <p>© {new Date().getFullYear()} CementBuild. All Rights Reserved.</p>
+          </div>
         </div>
       </footer>
 
-
-
+      {/* WHATSAPP FLOAT */}
       <a
         href="https://wa.me/917450017315"
         target="_blank"

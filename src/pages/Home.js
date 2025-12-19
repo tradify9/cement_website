@@ -3,151 +3,181 @@ import { TypeAnimation } from "react-type-animation";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
-
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
+  return (
+    <>
+      <section className="cement-slider-section">
 
-    return (
-        <>
-          <section className="cement-slider-section">
+        <Carousel id="cementSlider" interval={2000} ride="carousel">
+          
+          {/* ===== SLIDE 1 ===== */}
+          <Carousel.Item>
+            <img
+              className="d-block w-100 slider-img"
+              src="https://ccemagazine.com/wp-content/uploads/sites/11/2024/12/Construction-engineering-trends-2024-800x445.png"
+              alt="Cement Work"
+            />
 
-      <Carousel id="cementSlider" interval={2000} ride="carousel">
-        <Carousel.Item>
-          <img
-            className="d-block w-100 slider-img"
-            src="https://ccemagazine.com/wp-content/uploads/sites/11/2024/12/Construction-engineering-trends-2024-800x445.png"
-            alt="Cement Work"
-          />
-          {/* ✅ COMMON OVERLAY (ALL SLIDES) */}
-          <Carousel.Caption className="slider-overlay">
-            <h1 className="slider-heading">
-              <TypeAnimation
-                sequence={[
-                  "Strong Cement for Strong Homes",
-                  2000,
-                  "Build Safe & Durable Houses",
-                  2000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
+            <Carousel.Caption className="slider-overlay">
+              <h1 className="slider-heading">
+                <TypeAnimation
+                  sequence={[
+                    "Strong Cement for Strong Homes",
+                    2000,
+                    "Build Safe & Durable Houses",
+                    2000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </h1>
 
-            <p className="slider-para">
-              Premium quality cement is the foundation of every strong
-              and long-lasting home. It ensures better strength,
-              durability, and safety for your dream house.
-            </p>
+              <p className="slider-para">
+                Premium quality cement is the foundation of every strong
+                and long-lasting home. It ensures better strength,
+                durability, and safety for your dream house.
+              </p>
 
-            <div className="slider-buttons">
-              <button className="btn btn-yellow">Get Quote</button>
-              <button className="btn btn-outline-yellow">Contact Us</button>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
+              <div className="slider-buttons">
+                {/* <button className="btn btn-yellow">Get Quote</button> */}
+                <Link to="/about" className="btn btn-yellow">
+                 Get Quote
+                </Link>
 
-        <Carousel.Item>
-          <img
-            className="d-block w-100 slider-img"
-            src="https://static.vecteezy.com/system/resources/thumbnails/033/027/793/small/business-man-construction-engineers-supervising-progress-of-construction-project-at-construction-site-ai-generate-free-photo.jpg"
-            alt="Construction Site"
-          />
-          <Carousel.Caption className="slider-overlay">
-            <h1 className="slider-heading">
-              <TypeAnimation
-                sequence={[
-                  "Strong Cement for Strong Homes",
-                  2000,
-                  "Build Safe & Durable Houses",
-                  2000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
+                {/* ✅ CONTACT US LINK */}
+                <Link to="/contact" className="btn btn-outline-yellow">
+                  Contact Us
+                </Link>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
 
-            <p className="slider-para">
-              Premium quality cement is the foundation of every strong
-              and long-lasting home. It ensures better strength,
-              durability, and safety for your dream house.
-            </p>
+          {/* ===== SLIDE 2 ===== */}
+          <Carousel.Item>
+            <img
+              className="d-block w-100 slider-img"
+              src="https://static.vecteezy.com/system/resources/thumbnails/033/027/793/small/business-man-construction-engineers-supervising-progress-of-construction-project-at-construction-site-ai-generate-free-photo.jpg"
+              alt="Construction Site"
+            />
 
-            <div className="slider-buttons">
-              <button className="btn btn-yellow">Get Quote</button>
-              <button className="btn btn-outline-yellow">Contact Us</button>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
+            <Carousel.Caption className="slider-overlay">
+              <h1 className="slider-heading">
+                <TypeAnimation
+                  sequence={[
+                    "Strong Cement for Strong Homes",
+                    2000,
+                    "Build Safe & Durable Houses",
+                    2000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </h1>
 
-        <Carousel.Item>
-          <img
-            className="d-block w-100 slider-img"
-            src="https://st2.depositphotos.com/1001335/9340/i/450/depositphotos_93401314-stock-photo-concept-of-construction-and-design.jpg"
-            alt="Home Construction"
-          />
-          <Carousel.Caption className="slider-overlay">
-            <h1 className="slider-heading">
-              <TypeAnimation
-                sequence={[
-                  "Strong Cement for Strong Homes",
-                  2000,
-                  "Build Safe & Durable Houses",
-                  2000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
+              <p className="slider-para">
+                Premium quality cement is the foundation of every strong
+                and long-lasting home. It ensures better strength,
+                durability, and safety for your dream house.
+              </p>
 
-            <p className="slider-para">
-              Premium quality cement is the foundation of every strong
-              and long-lasting home. It ensures better strength,
-              durability, and safety for your dream house.
-            </p>
+              <div className="slider-buttons">
+                {/* <button className="btn btn-yellow">Get Quote</button> */}
+                   <Link to="/about" className="btn btn-yellow">
+                 Get Quote
+                </Link>
+                <Link to="/contact" className="btn btn-outline-yellow">
+                  Contact Us
+                </Link>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
 
-            <div className="slider-buttons">
-              <button className="btn btn-yellow">Get Quote</button>
-              <button className="btn btn-outline-yellow">Contact Us</button>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
+          {/* ===== SLIDE 3 ===== */}
+          <Carousel.Item>
+            <img
+              className="d-block w-100 slider-img"
+              src="https://st2.depositphotos.com/1001335/9340/i/450/depositphotos_93401314-stock-photo-concept-of-construction-and-design.jpg"
+              alt="Home Construction"
+            />
 
-        <Carousel.Item>
-          <img
-            className="d-block w-100 slider-img"
-            src="https://www.e-basel.com/wp-content/uploads/2023/04/Growing-Urbanization-is-Bringing-Robots-into-Construction.jpg"
-            alt="Building Material"
-          />
-          <Carousel.Caption className="slider-overlay">
-            <h1 className="slider-heading">
-              <TypeAnimation
-                sequence={[
-                  "Strong Cement for Strong Homes",
-                  2000,
-                  "Build Safe & Durable Houses",
-                  2000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
+            <Carousel.Caption className="slider-overlay">
+              <h1 className="slider-heading">
+                <TypeAnimation
+                  sequence={[
+                    "Strong Cement for Strong Homes",
+                    2000,
+                    "Build Safe & Durable Houses",
+                    2000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </h1>
 
-            <p className="slider-para">
-              Premium quality cement is the foundation of every strong
-              and long-lasting home. It ensures better strength,
-              durability, and safety for your dream house.
-            </p>
+              <p className="slider-para">
+                Premium quality cement is the foundation of every strong
+                and long-lasting home. It ensures better strength,
+                durability, and safety for your dream house.
+              </p>
 
-            <div className="slider-buttons">
-              <button className="btn btn-yellow">Get Quote</button>
-              <button className="btn btn-outline-yellow">Contact Us</button>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+              <div className="slider-buttons">
+                {/* <button className="btn btn-yellow">Get Quote</button> */}
+                   <Link to="/about" className="btn btn-yellow">
+                 Get Quote
+                </Link>
+                <Link to="/contact" className="btn btn-outline-yellow">
+                  Contact Us
+                </Link>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
 
-    </section>
+          {/* ===== SLIDE 4 ===== */}
+          <Carousel.Item>
+            <img
+              className="d-block w-100 slider-img"
+              src="https://www.e-basel.com/wp-content/uploads/2023/04/Growing-Urbanization-is-Bringing-Robots-into-Construction.jpg"
+              alt="Building Material"
+            />
+
+            <Carousel.Caption className="slider-overlay">
+              <h1 className="slider-heading">
+                <TypeAnimation
+                  sequence={[
+                    "Strong Cement for Strong Homes",
+                    2000,
+                    "Build Safe & Durable Houses",
+                    2000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </h1>
+
+              <p className="slider-para">
+                Premium quality cement is the foundation of every strong
+                and long-lasting home. It ensures better strength,
+                durability, and safety for your dream house.
+              </p>
+
+              <div className="slider-buttons">
+                {/* <button className="btn btn-yellow">Get Quote</button> */}
+                   <Link to="/about" className="btn btn-yellow">
+                 Get Quote
+                </Link>
+                <Link to="/contact" className="btn btn-outline-yellow">
+                  Contact Us
+                </Link>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+        </Carousel>
+
+      </section>
 
 
 
