@@ -55,7 +55,7 @@ export default function Navbar() {
 
           {/* PHONE */}
           <div className="nav-phone">
-            📞 +91 2245301996
+            📞 +91 02245301996
           </div>
         </div>
       </div>

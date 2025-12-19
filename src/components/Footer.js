@@ -86,7 +86,7 @@ export default function Footer() {
 
               <p className="footer-contact">
                 <i className="bi bi-telephone-fill"></i>
-                <a href="tel:+912245301996">+91 22 4530 1996</a>
+                <a href="tel:+9102245301996">+91 022 4530 1996</a>
               </p>
             </div>
 
